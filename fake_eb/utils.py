@@ -35,7 +35,6 @@ def fix_fake_response_times(fake_json_response):
 def fix_event(event):
     day = parse_day(event.get("day_specifier"))
     offset = parse_offset(event.get('offset_specifier'))
-    import pdb; pdb.set_trace()
     time = event.get('time')
     event_datetime = datetime.combine(day + offset, time)
     duration = parse_duration(event.get('duration_specifier'))
