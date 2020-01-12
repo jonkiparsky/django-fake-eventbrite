@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  web:
+    container_name: fake_events
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+
+networks:
+  default:
+    external:
+      name: impact-api_default
